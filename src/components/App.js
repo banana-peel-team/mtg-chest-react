@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+import Header from './common/Header';
 import history from '../utils/history';
 import RouteFromPath from './routes/RouteFromPath';
 import routes from '../routes';
@@ -16,15 +17,18 @@ const App = ({ authenticated, checked }) => (
     </Helmet>
     <ConnectedRouter history={history}>
       {checked &&
-        <Switch>
-          {routes.map((route, index) =>
-            <RouteFromPath
-              key={`route${index}`}
-              {...route}
-              authenticated={authenticated}
-            />)
-          }
-        </Switch>
+        <Fragment>
+          { authenticated && <Header /> }
+          <Switch>
+            {routes.map((route, index) =>
+              <RouteFromPath
+                key={`route${index}`}
+                {...route}
+                authenticated={authenticated}
+              />)
+            }
+          </Switch>
+        </Fragment>
       }
     </ConnectedRouter>
   </Fragment>

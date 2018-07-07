@@ -1,5 +1,8 @@
 import routesPaths from './constants/routesPaths';
 import HomePage from './containers/HomePage';
+import CollectionPage from './containers/CollectionPage';
+import WizardPage from './containers/WizardPage';
+import SuggestionPage from './containers/SuggestionPage';
 import LoginPage from './containers/LoginPage';
 import SignUpPage from './containers/SignUpPage';
 import NotFoundPage from './containers/NotFoundPage';
@@ -8,6 +11,24 @@ const routes = [
   {
     path: routesPaths.index,
     component: HomePage,
+    exact: true,
+    private: true
+  },
+  {
+    path: routesPaths.collection,
+    component: CollectionPage,
+    exact: true,
+    private: true
+  },
+  {
+    path: routesPaths.wizard,
+    component: WizardPage,
+    exact: true,
+    private: true
+  },
+  {
+    path: routesPaths.suggestion,
+    component: SuggestionPage,
     exact: true,
     private: true
   },

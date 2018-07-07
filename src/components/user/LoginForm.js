@@ -13,7 +13,7 @@ import Input from '../common/Input';
 import { validations, login } from '../../utils/constraints';
 
 const messages = defineMessages({
-  email: { id: 'login.form.email' },
+  username: { id: 'login.form.username' },
   password: { id: 'login.form.password' }
 });
 
@@ -22,10 +22,10 @@ export const LoginForm = ({ handleSubmit, error, submitting, intl }) => (
     {error && <strong>{error}</strong>}
     <div>
       <Field
-        name="email"
-        label={intl.formatMessage(messages.email)}
+        name="username"
+        label={intl.formatMessage(messages.username)}
         component={Input}
-        type="email"
+        type="text"
       />
     </div>
     <div>

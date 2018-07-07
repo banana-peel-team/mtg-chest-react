@@ -13,7 +13,7 @@ import Input from '../common/Input';
 import { validations, signUp } from '../../utils/constraints';
 
 const messages = defineMessages({
-  email: { id: 'login.form.email' },
+  username: { id: 'login.form.username' },
   password: { id: 'login.form.password' },
   passConfirmation: { id: 'signup.form.passconfirmation' }
 });
@@ -23,7 +23,7 @@ const SignUpForm = ({ handleSubmit, submitting, intl }) => (
     <div>
       <Field
         name="email"
-        label={intl.formatMessage(messages.email)}
+        label={intl.formatMessage(messages.username)}
         component={Input}
         type="email"
       />

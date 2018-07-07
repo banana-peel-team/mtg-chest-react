@@ -14,12 +14,16 @@ const SignUpPage = ({ signUp, authenticated }) => {
   }
 
   return (
-    <div>
-      <p><FormattedMessage id="signup.title" /></p>
-      <SignUpForm onSubmit={signUp} />
-      <Link to={routes.login}>
-        <FormattedMessage id="signup.signin" />
-      </Link>
+    <div className="session-page sign-up-page grid-container full">
+      <div className="grid-x grid-margin-x align-middle">
+        <div className="session-wrapper">
+          <p><FormattedMessage id="signup.title" /></p>
+          <SignUpForm onSubmit={signUp} />
+          <Link to={routes.login}>
+            <FormattedMessage id="signup.signin" />
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };

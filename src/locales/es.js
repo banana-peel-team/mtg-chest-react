@@ -2,13 +2,13 @@ export default {
   'login.title': 'INICIAR SESIÓN',
   'login.signup': 'Registrarse',
 
-  'login.form.email': 'Email',
+  'login.form.username': 'Usuario',
   'login.form.password': 'Contraseña',
   'login.form.submit': 'Continuar',
 
   'login.forgot_password': '¿Olvidó su contraseña?',
-  'login.form.email.presence': 'Debe ingresar un email para continuar',
-  'login.form.email.invalid': 'Debe ingresar un email válido',
+  'login.form.username.presence': 'Debe ingresar un usuario para continuar',
+  'login.form.username.invalid': 'Debe ingresar un usuario válido',
   'login.form.password.presence': 'Debe ingresar una contraseña para continuar',
 
   'signup.title': 'REGISRARSE',
@@ -19,11 +19,11 @@ export default {
 
   'logout.button': 'LOGOUT',
 
-  'home.welcome': 'Welcome to React Redux Base',
+  'home.welcome': 'Bienvenido a MTG Chest',
 
   // errors
-  'email.presence': 'Debe ingresar un email para continuar',
-  'email.invalid': 'Debe ingresar un email válido',
+  'username.presence': 'Debe ingresar un username para continuar',
+  'username.invalid': 'Debe ingresar un username válido',
   'password.presence': 'Debe ingresar una contraseña para continuar',
   'passwordConfirmation.presence': 'Debe confirmar su contraseña para continuar',
   'passwordConfirmation.equality': 'Su confirmación de contraseña debe ser igual a la contraseña'
