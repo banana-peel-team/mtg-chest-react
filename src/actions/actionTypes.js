@@ -1,2 +1,5 @@
 // action types
-// User actions
+// cardActions
+export const GET_COLLECTION = 'GET_COLLECTION';
+export const GET_COLLECTION_ERROR = 'GET_COLLECTION_ERROR';
+export const GET_COLLECTION_SUCCESS = 'GET_COLLECTION_SUCCESS';
