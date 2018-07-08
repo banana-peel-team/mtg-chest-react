@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool, func } from 'prop-types';
 import { connect } from 'react-redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
 import LoginForm from '../components/user/LoginForm';
@@ -14,12 +14,13 @@ const LoginPage = ({ login, authenticated }) => {
   }
 
   return (
-    <div>
-      <p><FormattedMessage id="login.title" /></p>
-      <LoginForm onSubmit={login} />
-      <Link to={routes.signUp}>
-        <FormattedMessage id="login.signup" />
-      </Link>
+    <div className="session-page login-page grid-container full">
+      <div className="grid-x grid-margin-x align-middle">
+        <div className="session-wrapper">
+          <p><FormattedMessage id="login.title" /></p>
+          <LoginForm onSubmit={login} />
+        </div>
+      </div>
     </div>
   );
 };

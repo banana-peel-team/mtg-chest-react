@@ -14,10 +14,7 @@ export const login = user =>
     });
 
 export const logout = () =>
-  () =>
-    sessionApi.logout().then(() => {
-      sessionService.deleteSession();
-      sessionService.deleteUser();
-    }).catch((err) => {
-      throw (err);
-    });
+  () => {
+    sessionService.deleteSession();
+    sessionService.deleteUser();
+  };

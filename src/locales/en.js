@@ -2,7 +2,7 @@ export default {
   'login.title': 'LOGIN',
   'login.signup': 'Sign up',
 
-  'login.form.email': 'Email',
+  'login.form.username': 'Username',
   'login.form.password': 'Password',
   'login.form.submit': 'Submit',
 
@@ -14,11 +14,11 @@ export default {
 
   'logout.button': 'LOGOUT',
 
-  'home.welcome': 'Welcome to React Redux Base',
+  'home.welcome': 'Welcome to MTG Chest!',
 
   // errors
-  'email.presence': 'You must enter an email to continue',
-  'email.invalid': 'You must enter a valid email',
+  'username.presence': 'You must enter an username to continue',
+  'username.invalid': 'You must enter a valid username',
   'password.presence': 'You must enter a password to continue',
   'passwordConfirmation.presence': 'You must enter a password confirmation to continue',
   'passwordConfirmation.equality': 'Your password confirmation must be equal to the password',

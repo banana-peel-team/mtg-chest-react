@@ -4,11 +4,9 @@ import humps from 'humps';
 import routes from '../constants/routesPaths';
 
 const saveSessionHeaders = (headers) => {
-  if (headers.get('access-token')) {
+  if (headers.get('Authorization')) {
     const sessionHeaders = {
-      token: headers.get('access-token'),
-      uid: headers.get('uid'),
-      client: headers.get('client')
+      token: headers.get('Authorization')
     };
     sessionService.saveSession(sessionHeaders);
   }
@@ -65,10 +63,8 @@ class Api {
   addTokenHeader(requestData) {
     return sessionService.loadSession()
       .then((session) => {
-        const { token, client, uid } = session;
-        requestData.headers['access-token'] = token;
-        requestData.headers.client = client;
-        requestData.headers.uid = uid;
+        const { token } = session;
+        requestData.Authentication = token;
         return requestData;
       }).catch(() => requestData);
   }
