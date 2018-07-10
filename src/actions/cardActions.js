@@ -19,8 +19,7 @@ export const getCollectionError = error => ({
 export const getCollection = () =>
   (dispatch) => {
     dispatch(getCollectionProcess());
-    cardApi.getCollection().then(({ collection }) => {
-      console.log(collection); // eslint-disable-line no-console
+    cardApi.getCollection().then((collection) => {
       dispatch(getCollectionSuccess(collection));
     }).catch((err) => {
       dispatch(getCollectionError(err));

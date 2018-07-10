@@ -65,7 +65,6 @@ class Api {
       .then((session) => {
         const { token } = session;
         requestData.headers.Authorization = token;
-        console.log(requestData)
         return requestData;
       }).catch(() => requestData);
   }
