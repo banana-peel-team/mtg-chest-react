@@ -64,7 +64,7 @@ class Api {
     return sessionService.loadSession()
       .then((session) => {
         const { token } = session;
-        requestData.Authentication = token;
+        requestData.headers.Authorization = token;
         return requestData;
       }).catch(() => requestData);
   }
