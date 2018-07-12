@@ -70,8 +70,8 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2fbcf7,
-  secondary: #767676,
+  primary: #f7d1a4,
+  secondary: #4f4257,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
@@ -79,8 +79,8 @@ $foundation-palette: (
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+$black: #2b2b2b;
+$white: #ffffff;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
@@ -91,7 +91,7 @@ $global-position: 1rem;
 $global-weight-normal: 600;
 $global-weight-bold: 700;
 $global-radius: 0;
-$global-menu-padding: 0.7rem 1rem;
+$global-menu-padding: rem-calc(4) rem-calc(20);
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
@@ -477,7 +477,7 @@ $menu-simple-margin: 1rem;
 $menu-item-color-active: $white;
 $menu-item-background-active: get-color(primary);
 $menu-icon-spacing: 0.25rem;
-$menu-item-background-hover: $light-gray;
+$menu-item-background-hover: $black;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
 $menu-icons-back-compat: true;
@@ -847,8 +847,8 @@ $tooltip-radius: $global-radius;
 // 55. Top Bar
 // -----------
 
-$topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-padding: 0rem;
+$topbar-background: $black;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;

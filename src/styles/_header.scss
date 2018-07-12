@@ -1,3 +1,33 @@
 .nav-header {
-  .active-link { color: $success-color; };
+  box-shadow: rem-calc(0 2 4 0) rgba($black, 0.5);
+  font-family: $title-font;
+  font-weight: bold;
+
+  li {
+    border-right: 1px solid $secondary-color;
+    margin: rem-calc(12) 0;
+
+    a {
+      color: $white;
+      font-size: rem-calc(18);
+    }
+  }
+
+  li:first-of-type, li:last-of-type { border-right: none; }
+  .active-link { color: $primary-color; };
+
+  .settings-container {
+    position: relative;
+
+    .avatar {
+      border: 1px solid $white;
+      border-radius: 50%;
+      height: rem-calc(50);
+      max-width: inherit;
+      position: absolute;
+      right: rem-calc(50);
+      top: rem-calc(0);
+      width: rem-calc(50);
+    }
+  }
 }

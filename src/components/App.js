@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { bool } from 'prop-types';
+import { bool, object } from 'prop-types';
 import { ConnectedRouter } from 'react-router-redux';
 import { connect } from 'react-redux';
 import { Switch } from 'react-router-dom';
@@ -10,15 +10,15 @@ import history from '../utils/history';
 import RouteFromPath from './routes/RouteFromPath';
 import routes from '../routes';
 
-const App = ({ authenticated, checked }) => (
+const App = ({ authenticated, checked, currentUser }) => (
   <Fragment>
     <Helmet>
-      <title>RS React Redux Base</title>
+      <title>MTG Chest</title>
     </Helmet>
     <ConnectedRouter history={history}>
       {checked &&
         <Fragment>
-          { authenticated && <Header /> }
+          { authenticated && <Header currentUser={currentUser} /> }
           <Switch>
             {routes.map((route, index) =>
               <RouteFromPath
@@ -36,12 +36,14 @@ const App = ({ authenticated, checked }) => (
 
 App.propTypes = {
   authenticated: bool.isRequired,
-  checked: bool.isRequired
+  checked: bool.isRequired,
+  currentUser: object
 };
 
 const mapState = state => ({
   checked: state.getIn(['session', 'checked']),
-  authenticated: state.getIn(['session', 'authenticated'])
+  authenticated: state.getIn(['session', 'authenticated']),
+  currentUser: state.getIn(['session', 'user'])
 });
 
 export default connect(mapState)(App);
